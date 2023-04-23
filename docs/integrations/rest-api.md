@@ -95,7 +95,7 @@ See the [filtering documentation](../reference/filtering.md) for more details.
 
 ## Serialization
 
-The REST API employs two types of serializers to represent model data: base serializers and nested serializers. The base serializer is used to present the complete view of a model. This includes all database table fields which comprise the model, and may include additional metadata. A base serializer includes relationships to parent objects, but **does not** include child objects. For example, the `VLANSerializer` includes a nested representation its parent VLANGroup (if any), but does not include any assigned Prefixes.
+The REST API employs two types of serializers to represent model data: base serializers and nested serializers. The base serializer is used to present the complete view of a model. This includes all database table fields which comprise the model, and may include additional metadata. A nested serializer includes relationships to parent objects, but **does not** include child objects. For example, the `VLANSerializer` includes a nested representation its parent VLANGroup (if any), but does not include any assigned Prefixes.
 
 ```json
 {
